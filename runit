@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+/usr/bin/rabbitmqadmin --host=${RABBITMQ_HOST} --port=${RABBITMQ_PORT} --vhost=${RABBITMQ_VHOST} --username=${RABBITMQ_USER} --password=${RABBITMQ_PASSWORD} $@
