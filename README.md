@@ -6,7 +6,7 @@ Examples:
 ```
 $ docker run --rm \
   --env RABBITMQ_HOST=mq.acme.com \
-  --env RABBITMQ_USERNAME=guest \
+  --env RABBITMQ_USER=guest \
   --env RABBITMQ_PASSWORD=test \
   gildas/rabbitmqadmin \
   list exchanges
