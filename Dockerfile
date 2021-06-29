@@ -1,6 +1,6 @@
 FROM alpine
 LABEL maintainer="Gildas Cherruel <gildas@breizh.org>"
-LABEL version="0.0.2"
+LABEL version="0.0.3"
 LABEL description="Runs rabbitmqadmin"
 
 ENV RABBITMQ_HOST     localhost
@@ -14,7 +14,7 @@ RUN addgroup -S rabbitmq && \
 
 RUN apk add --no-cache curl && \
     apk add --no-cache python && \
-    curl -L https://raw.githubusercontent.com/rabbitmq/rabbitmq-management/v3.7.4/bin/rabbitmqadmin -o /usr/bin/rabbitmqadmin && \
+    curl -L https://raw.githubusercontent.com/rabbitmq/rabbitmq-management/v3.8.18/bin/rabbitmqadmin -o /usr/bin/rabbitmqadmin && \
     chmod +x /usr/bin/rabbitmqadmin
 ADD ./runit /usr/bin
 RUN chmod +x /usr/bin/runit
