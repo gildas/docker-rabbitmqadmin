@@ -14,7 +14,8 @@ RUN addgroup -S rabbitmq && \
 
 RUN apk add --no-cache curl && \
     apk add --no-cache python3 && \
-    curl -L https://raw.githubusercontent.com/rabbitmq/rabbitmq-management/v3.8.18/bin/rabbitmqadmin -o /usr/bin/rabbitmqadmin && \
+    curl -L https://raw.githubusercontent.com/rabbitmq/rabbitmq-server/v3.8.18/deps/rabbitmq_management/bin/rabbitmqadmin -o /usr/bin/rabbitmqadmin && \
+    
     chmod +x /usr/bin/rabbitmqadmin
 ADD ./runit /usr/bin
 RUN chmod +x /usr/bin/runit
