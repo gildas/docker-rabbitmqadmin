@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.15.3
 LABEL maintainer="Gildas Cherruel <gildas@breizh.org>"
 LABEL version="0.0.3"
 LABEL description="Runs rabbitmqadmin"
